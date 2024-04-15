@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FurryFriend Bot</title>
+    <!-- Підключення бібліотеки Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="1b69f0f9c1" crossorigin="anonymous" />
     <style>
-        /* Стилі для сторінки */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -18,40 +19,30 @@
         .container {
             width: 100%;
             max-width: 800px;
-            margin: 20px auto;
+            margin: 0 auto;
             padding: 20px;
             background-color: rgba(255, 255, 255, 0.8);
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            height: 162vh; /* Встановлення висоти контейнера на висоту всього екрану */
         }
         h1, h2, p {
             text-align: center;
             color: #333;
         }
         .link-container {
-            text-align: center;
-            margin-top: 20px;
+            text-align: right; /* Вирівнюємо кнопки по правому краю */
+            margin-bottom: 20px; /* Додано відступ під кнопками */
         }
-        .bot-link {
-            font-size: 30px;
-            margin-right: 10px;
+        .link-container a {
+            margin-left: 10px; /* Задаємо відступи між кнопками */
+            text-decoration: none;
             color: #0088cc;
         }
-        .bot-link img {
-            width: 50px;
-            height: 50px;
-            vertical-align: middle;
-            margin-bottom: -10px;
-        }
-        .tech-support {
-            margin-top: 50px;
-            text-align: center;
-        }
-        .tech-support img {
-            width: 30px;
-            height: 30px;
+        .tech-support i {
+            font-size: 30px;
             margin: 0 10px;
-            vertical-align: middle;
+            color: #333;
         }
         .bot-description {
             margin-top: 20px;
@@ -61,22 +52,30 @@
 </head>
 <body>
     <div class="container">
-        <h1>Welcome to FurryFriend Bot!</h1>
-        <p>Discover the perfect companion for you and your furry friend.</p>
+        <div class="link-container">
+            <a href="#">Допомога</a>
+            <a href="#">Про нас</a>
+            <a href="#">Підтримати</a>
+            <a href="#">Безпека</a>
+            <a href="#">Правила</a>
+        </div>
+        <h1>Ласкаво просимо FurryFriend Bot!</h1>
+        <p>Знайдіть ідеального компаньйона для себе та свого пухнастого друга.</p>
+        <p>Тут ви можете ознайомитися з функціоналом нашого бота.</p>
         <div class="image-container">
             <img src="images/two_dog_love.jpg" alt="Two dogs in love" style="border-radius: 8px; width: 100%; height: auto;">
         </div>
         <div class="link-container" id="botLinkContainer">
-            <a href="https://t.me/FurryFriendBot" class="bot-link"><img src="images/telegram.png" alt="Telegram"></a>
+            <a href="https://t.me/FurryFriendBot"><i class="fab fa-telegram fa-9x" ></i></a>
         </div>
-        <p class="bot-description">FurryFriend is a Telegram bot where pet owners can connect and introduce their furry companions to each other.</p>
+        <p class="bot-description">FurryFriend – це Telegram-бот, де власники домашніх тварин можуть спілкуватися та знайомити своїх пухнастих компаньйонів один з одним.</p>
+        <!-- Розділ для технічної підтримки з іконками Font Awesome -->
         <div class="tech-support">
             <span>Technical Support:</span>
-            <a href="https://www.instagram.com/"><img src="images/instagram.png" alt="Instagram"></a>
-            <a href="https://www.tiktok.com/"><img src="images/tiktok.png" alt="TikTok"></a>
-            <a href="https://www.facebook.com/"><img src="images/facebook.png" alt="Facebook"></a>
-            <a href="https://www.youtube.com/"><img src="images/youtube.png" alt="YouTube"></a>
-            
+            <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/"><i class="fab fa-tiktok"></i></a>
+            <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
         </div>
     </div>
 </body>
