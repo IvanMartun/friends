@@ -6,7 +6,10 @@
     <title>FurryFriend Bot</title>
     <!-- Підключення бібліотеки Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="1b69f0f9c1" crossorigin="anonymous" />
+    <!-- Підключення Swiper.js CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <style>
+        /* Ваші стилі тут */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -73,6 +76,11 @@
             margin-top: 20px;
             color: #333;
         }
+        .swiper-container img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+
     </style>
 </head>
 <body>
@@ -88,9 +96,18 @@
         <h1>Ласкаво просимо FurryFriend Bot!</h1>
         <p>Знайдіть ідеального компаньйона для себе та свого пухнастого друга.</p>
         <p>Тут ви можете ознайомитися з функціоналом нашого бота.</p>
-        <div class="image-container">
-            <img src="images/two_dog_love.jpg" alt="Two dogs in love" style="border-radius: 8px; width: 100%; height: auto;">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="images/photo1.jpg" alt="Photo 1"></div>
+                <div class="swiper-slide"><img src="images/photo2.jpg" alt="Photo 2"></div>
+                <div class="swiper-slide"><img src="images/photo3.jpg" alt="Photo 3"></div>
+                <!-- Додайте інші зображення з папки "images" -->
+            </div>
+            <!-- Кнопки навігації -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
         </div>
+
         <p>Натисніть на кнопку нище, щоб перейти на бота</p>
         <div class="link-container" id="botLinkContainer">
             <a href="https://t.me/FurryFriendBot"><i class="fab fa-telegram fa-9x" ></i></a>
@@ -126,5 +143,20 @@
             <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
         </div>
     </div>
+
+    <!-- Підключення Swiper.js -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- Ініціалізація Swiper -->
+    <script>
+        const swiper = new Swiper('.swiper-container', {
+            // Налаштування каруселі
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+// Показувати лише один слайд одночасно
+            spaceBetween: 1000,
+        });
+    </script>
 </body>
 </html>
