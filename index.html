@@ -4,67 +4,80 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FurryFriend Bot</title>
-    <!-- Підключення бібліотеки Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="1b69f0f9c1" crossorigin="anonymous" />
-    <!-- Підключення Swiper.js CSS -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <style>
-        /* Ваші стилі тут */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #c12c2c;
             color: #333;
             background-image: url('images/background.jpg');
             background-size: cover;
+            background-attachment: fixed; 
         }
+
+        .header {
+            background-color: rgba(12, 11, 11, 0.94);
+            padding: 10px 0; 
+            position: fixed; 
+            width: 100%;
+            top: 0;
+            z-index: 999;
+        }
+
+        .header .link-container {
+            text-align: center; 
+        }
+        
+        .link1-container{
+            text-align: center;
+        }
+
         .container {
             width: 100%;
             max-width: 800px;
-            margin: 0 auto;
+            margin: 70px auto 20px; 
             padding: 20px;
-            background-color: rgb(243, 237, 237);
+            background-color: #fff;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(188, 71, 71, 0.1);
-            height: 242vh; /* Встановлення висоти контейнера на висоту всього екрану */
+            height: 242vh; 
         }
-        
+
         h1, h2, p {
             text-align: center;
             color: #333;
         }
-        .link-container {
-            text-align: center; /* Змінено вирівнювання на центр */
-            margin-bottom: 20px; /* Збережено відступ під кнопками */
-        }
+
         .link-container a {
-            margin-left: 10px; /* Задаємо відступи між кнопками */
+            margin-left: 10px;
             text-decoration: none;
             color: #0088cc;
         }
+
         .link-container a:hover i {
-            color: #FF5733; /* Змінює колір іконок при наведенні на будь-яке посилання */
+            color: #FF5733;
         }
 
         .tech-support a:hover i {
-            color: #33ff5f; /* Змінює колір іконок при наведенні на посилання технічної підтримки */
+            color: #33ff5f;
         }
 
         #botLinkContainer a:hover i {
-            color: #b71919; /* Змінює колір іконок при наведенні на посилання на телеграм */
+            color: #b71919;
         }
 
         .link-container a:hover {
-            color: #FF5733; /* Змінює колір тексту кнопок при наведенні на будь-яке посилання */
+            color: #FF5733;
         }
 
         .tech-support a:hover {
-            color: #33ff5f; /* Змінює колір тексту кнопок при наведенні на посилання технічної підтримки */
+            color: #33ff5f;
         }
 
         #botLinkContainer a:hover {
-            color: #FF5733; /* Змінює колір тексту кнопок при наведенні на посилання на телеграм */
+            color: #FF5733;
         }
 
         .tech-support i {
@@ -72,19 +85,25 @@
             margin: 0 10px;
             color: #333;
         }
+
         .bot-description {
             margin-top: 20px;
             color: #333;
         }
+
         .swiper-container img {
             max-width: 100%;
             max-height: 100%;
+            display: none; 
         }
 
+        .swiper-slide-active img {
+            display: block; 
+        }
     </style>
 </head>
 <body>
-    <div class="container">
+    <div class="header">
         <div class="link-container">
             <a href="help.html">Допомога</a>
             <a href="about.html">Про нас</a>
@@ -92,7 +111,9 @@
             <a href="security.html">Безпека</a>
             <a href="rules.html">Правила</a>
         </div>
-        
+    </div>
+
+    <div class="container">
         <h1>Ласкаво просимо FurryFriend Bot!</h1>
         <p>Знайдіть ідеального компаньйона для себе та свого пухнастого друга.</p>
         <p>Тут ви можете ознайомитися з функціоналом нашого бота.</p>
@@ -101,20 +122,22 @@
                 <div class="swiper-slide"><img src="images/photo1.jpg" alt="Photo 1"></div>
                 <div class="swiper-slide"><img src="images/photo2.jpg" alt="Photo 2"></div>
                 <div class="swiper-slide"><img src="images/photo3.jpg" alt="Photo 3"></div>
-                <!-- Додайте інші зображення з папки "images" -->
+
             </div>
-            <!-- Кнопки навігації -->
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
         </div>
 
-        <p>Натисніть на кнопку нище, щоб перейти на бота</p>
-        <div class="link-container" id="botLinkContainer">
+        <div>
+            <img src="avatar.jpg" alt="Avatar">
+        </div>
+
+        <p>Натисніть на кнопку нижче, щоб перейти на бота</p>
+        <div class="link1-container" id="botLinkContainer">
             <a href="https://t.me/FurryFriendBot"><i class="fab fa-telegram fa-9x" ></i></a>
         </div>
         <p class="bot-description">FurryFriend – це Telegram-бот, де власники домашніх тварин можуть спілкуватися та знайомити своїх пухнастих компаньйонів один з одним.</p>
 
-        <!-- Додали інформацію про бота -->
         <div class="bot-info">
             <h2>Мета:</h2>
             <p>FurryFriend Bot створений з метою полегшення пошуку і спілкування між власниками домашніх тварин. Онлайн-спільнота власників тварин може використовувати цей бот для знаходження ідеальних компаньйонів для своїх пухнастих друзів.</p>
@@ -134,7 +157,6 @@
                 <li><strong>Технічна Підтримка:</strong> Ця функція адресована всім користувачам бота, які потребують допомоги або мають запитання щодо його використання.</li>
             </ul>
         </div>
-        <!-- Розділ для технічної підтримки з іконками Font Awesome -->
         <div class="tech-support">
             <span>Technical Support:</span>
             <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
@@ -143,18 +165,14 @@
             <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
         </div>
     </div>
-
-    <!-- Підключення Swiper.js -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <!-- Ініціалізація Swiper -->
     <script>
         const swiper = new Swiper('.swiper-container', {
-            // Налаштування каруселі
+
             navigation: {
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
             },
-// Показувати лише один слайд одночасно
             spaceBetween: 1000,
         });
     </script>
