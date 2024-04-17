@@ -94,7 +94,7 @@
         .swiper-container img {
             max-width: 100%;
             max-height: 100%;
-            display: none; 
+            cursor: pointer;
         }
 
         .swiper-slide-active img {
@@ -124,15 +124,13 @@
                 <div class="swiper-slide"><img src="images/photo3.jpg" alt="Photo 3"></div>
 
             </div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
         </div>
 
         <div>
             <img src="avatar.jpg" alt="Avatar">
         </div>
 
-        <p>Натисніть на кнопку нижче, щоб перейти на бота</p>
+        <p>Натисніть на фотографію, щоб перегорнути</p>
         <div class="link1-container" id="botLinkContainer">
             <a href="https://t.me/FurryFriendBot"><i class="fab fa-telegram fa-9x" ></i></a>
         </div>
@@ -168,12 +166,16 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
         const swiper = new Swiper('.swiper-container', {
-
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
             spaceBetween: 1000,
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const images = document.querySelectorAll('.swiper-slide img');
+            images.forEach(function (image) {
+                image.addEventListener('click', function () {
+                    swiper.slideNext();
+                });
+            });
         });
     </script>
 </body>
